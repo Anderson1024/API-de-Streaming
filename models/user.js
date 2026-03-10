@@ -2,21 +2,32 @@ const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
 
-    name: {
-        type: String,
-        required: true
-    },
+  name: {
+    type: String,
+    required: true
+  },
 
-    email: {
-        type: String,
-        required: true,
-        unique: true
-    },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    index: true
+  },
 
-    createdAt: {
-        type: Date,
-        default: Date.now
+  profiles: [
+    {
+      name: String,
+      ageGroup: {
+        type: String,
+        enum: ["infantil", "adulto"]
+      }
     }
+  ],
+
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
 
 });
 
