@@ -11,13 +11,17 @@ Tecnologias:
 Rotas principais:
 
 POST /users
+
 GET /users
 
 POST /videos
+
 GET /videos
 
 POST /history
+
 GET /history/user/:id
 
 GET /stats/ranking/videos
+
 GET /stats/ranking/users
